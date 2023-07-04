@@ -1,0 +1,13 @@
+https://dev.to/pavanbelagatti/kubernetes-kustomize-tutorial-a-beginner-friendly-developer-guide-322n
+
+# kubernetes with kustomize
+kubectl apply -k ./
+
+# openshift
+oc apply -f ./
+
+$ oc apply -f helloworld-kustomize/
+configmap/the-map created
+deployment.apps/the-deployment created
+service/the-service created
+error: unable to recognize "helloworld-kustomize/kustomization.yaml": no matches for kind "Kustomization" in version "kustomize.config.k8s.io/v1beta1"

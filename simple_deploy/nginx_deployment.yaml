@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: simple-deploy
+  labels:
+    app: mydeploy
+  name: mydeploy-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mydeploy
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: mydeploy
+    spec:
+      containers:
+      - image: docker.io/bitnami/nginx
+        name: nginx
+        resources: {}
