@@ -1,3 +1,5 @@
+# apiVersion and kind does not apply to openshift
+# openshift does not require this 2 lines
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 # metadata:
@@ -9,6 +11,7 @@ commonLabels:
   app: hello
 
 resources:
+- namespace.yaml
 - deployment.yaml
 - service.yaml
 - configMap.yaml
